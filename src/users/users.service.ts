@@ -1,17 +1,31 @@
-import { Injectable, HttpStatus, HttpException } from '@nestjs/common';
-import { User } from './entities/user.entity';
-const BASE_URL = 'http://localhost:3030/users/users.json';
+import { InjectRepository } from "@nestjs/typeorm";
+import { User } from "./entities/user.entity";
+import { Repository } from "typeorm";
+import { Injectable } from "@nestjs/common";
+import { CreateUserDto } from "./dto/create-user.dto";
+import { Role } from "src/common/enum/rol.enum";
+
 @Injectable()
-export class UserService {
-async findUser(email: string): Promise<User> {
-const res = await fetch(BASE_URL);
-if (!res.ok)
-throw new HttpException(
-'Internal Server Error',
-HttpStatus.INTERNAL_SERVER_ERROR,
-);
-const allUsers = await res.json();
-const user = allUsers.find((usr: User) => usr.email === email);
-return user;
-}
+export class UsersService{
+    constructor(
+        @InjectRepository(User) private readonly userRepository: Repository<User>
+    ){}
+
+    create(createUserDto: CreateUserDto){
+        return this.userRepository.save(createUserDto);
+    }
+    findAll(){
+        return this.userRepository.find();
+    }
+
+    findOneByEmail(email: string ){
+        return this.userRepository.findOneBy({email});
+    }
+
+    findByEmailWithPassword(email: string){
+        return this.userRepository.findOne({
+            where: {email},
+            select:['id', 'username', 'email', 'password', 'role'],
+        })
+    }
 }
