@@ -16,7 +16,7 @@ export class AuthService{
     async register({username, password, email}: registerDto){
         const user = await this.usersService.findOneByEmail(email);
         if(user){
-            throw new BadRequestException ('El usuario ya existe');
+            throw new BadRequestException('El usuario ya existe');
         }
 
         return await this.usersService.create({
@@ -40,5 +40,19 @@ export class AuthService{
             access_token,
             email
         };
+    }
+
+    async getUserByToken(token: string) {
+        try {
+            const decodedToken = this.jwtService.verify(token);
+            const { email } = decodedToken;
+            return this.findUserByEmail(email);
+        } catch (error) {
+            throw new UnauthorizedException('Token inválido');
+        }
+    }
+
+    async findUserByEmail(email: string) {
+        return this.usersService.findOneByEmail(email);
     }
 }
