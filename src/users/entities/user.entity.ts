@@ -1,3 +1,4 @@
+import { IsEnum } from "class-validator";
 import { Role } from "src/common/enum/rol.enum";
 import { Entity, PrimaryGeneratedColumn, Column, DeleteDateColumn } from "typeorm"
 
@@ -16,7 +17,7 @@ export class User{
     @Column()
     email: string;
 
-    @Column()
+    @IsEnum(Role) // Assuming Rol is an Enum
     role: Role;
 
     @DeleteDateColumn()

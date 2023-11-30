@@ -19,13 +19,16 @@ let AuthService = class AuthService {
         this.usersService = usersService;
         this.jwtService = jwtService;
     }
-    async register({ username, password, email }) {
+    async register({ username, password, email, role }) {
         const user = await this.usersService.findOneByEmail(email);
         if (user) {
             throw new common_1.BadRequestException('El usuario ya existe');
         }
         return await this.usersService.create({
-            username, email, password: await bcrypt.hash(password, 10),
+            username,
+            email,
+            password: await bcrypt.hash(password, 10),
+            role,
         });
     }
     async login({ email, password }) {
