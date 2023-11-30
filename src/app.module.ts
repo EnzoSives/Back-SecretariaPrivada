@@ -10,11 +10,11 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'bjeea2lcgcdmneaujsib-mysql.services.clever-cloud.com',
       port: 3306,
-      username: 'root',
-      password: '4YwuPbb7W0uxGHg',
-      database: 'datos',
+      username: 'uxejyhsch46jhsem',
+      password: '2maesP71TZv3rr2KcJrc',
+      database: 'bjeea2lcgcdmneaujsib',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
