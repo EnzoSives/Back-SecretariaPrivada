@@ -13,17 +13,20 @@ export class AuthService{
         private jwtService: JwtService,
     ){}
 
-    async register({ username, password, email, role }: registerDto) {
+    async register({ username, password, email }: registerDto) {
         const user = await this.usersService.findOneByEmail(email);
         if (user) {
           throw new BadRequestException('El usuario ya existe');
         }
-    
+      
+        if (!password) {
+          throw new BadRequestException('La contraseña es requerida');
+        }
+      
         return await this.usersService.create({
           username,
           email,
-          password: await bcrypt.hash(password, 10),
-          role, // Include the role when creating the user
+          password: await bcrypt.hash(password, 10)
         });
       }
     async login ({ email, password}: loginDto){
@@ -35,7 +38,7 @@ export class AuthService{
         if (!isPasswordValid){
             throw new UnauthorizedException('password incorrecto');
         }
-        const payload = {email: user.email, role: user.role};
+        const payload = {email: user.email};
         const access_token = await this.jwtService.signAsync(payload);
 
         return{

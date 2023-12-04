@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
-const class_validator_1 = require("class-validator");
-const rol_enum_1 = require("../../common/enum/rol.enum");
 const typeorm_1 = require("typeorm");
 let User = class User {
     constructor(username, password, email) {
@@ -37,10 +35,6 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
-__decorate([
-    (0, class_validator_1.IsEnum)(rol_enum_1.Role),
-    __metadata("design:type", String)
-], User.prototype, "role", void 0);
 __decorate([
     (0, typeorm_1.DeleteDateColumn)(),
     __metadata("design:type", Date)
