@@ -5,7 +5,7 @@ const app_module_1 = require("./app.module");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors({
-        origin: 'http://localhost:8080',
+        origin: 'https://secretariamadariaga-799ec.web.app',
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true,
     });
