@@ -11,12 +11,7 @@ async function bootstrap() {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
-  app.enableCors({
-    origin: 'http://localhost:8080/',
-     // Reemplaza con el origen de tu frontend
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  });
+ 
 
   await app.listen(3000);
 }
