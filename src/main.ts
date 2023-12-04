@@ -6,7 +6,14 @@ async function bootstrap() {
 
   // Configurar CORS
   app.enableCors({
-    origin: 'https://secretariamadariaga-799ec.web.app', // Reemplaza con el origen de tu frontend
+    origin: 'https://secretariamadariaga-799ec.web.app',
+     // Reemplaza con el origen de tu frontend
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
+  app.enableCors({
+    origin: 'http://localhost:8080/',
+     // Reemplaza con el origen de tu frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
