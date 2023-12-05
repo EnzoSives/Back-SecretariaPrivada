@@ -64,8 +64,8 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "cargo", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
+    (0, typeorm_1.Column)({ default: 0 }),
+    __metadata("design:type", Number)
 ], Dato.prototype, "telefonos", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
@@ -73,6 +73,6 @@ __decorate([
 ], Dato.prototype, "acciones", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
-    __metadata("design:paramtypes", [String, String, String, String, String, String])
+    __metadata("design:paramtypes", [String, String, String, String, Number, String])
 ], Dato);
 //# sourceMappingURL=dato.entity.js.map

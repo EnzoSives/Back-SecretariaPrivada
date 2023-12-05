@@ -3,6 +3,6 @@ export class CreateDatoDto {
     apellido:string;
     empresa:string;
     cargo:string;
-    telefonos:string;
+    telefonos:number;
     acciones:string;
 }

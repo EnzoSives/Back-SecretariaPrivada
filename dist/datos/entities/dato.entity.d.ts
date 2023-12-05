@@ -4,14 +4,14 @@ export declare class Dato {
     apellido: string;
     empresa: string;
     cargo: string;
-    telefonos: string;
+    telefonos: number;
     acciones: string;
-    constructor(nombre: string, apellido: string, empresa: string, cargo: string, telefonos: string, acciones: string);
+    constructor(nombre: string, apellido: string, empresa: string, cargo: string, telefonos: number, acciones: string);
     getIdDato(): number;
     setNombre(nombre: string): void;
     setApellido(apellido: string): void;
     setAcciones(acciones: string): void;
     setEmpresa(empresa: string): void;
     setCargo(cargo: string): void;
-    setTelefonos(telefonos: string): void;
+    setTelefonos(telefonos: number): void;
 }

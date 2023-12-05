@@ -17,13 +17,13 @@ export class Dato {
     @Column()
     cargo: string
     
-    @Column()
-    telefonos: string
+    @Column({default: 0})
+    telefonos: number
     
     @Column()
     acciones: string
 
-    constructor(nombre:string, apellido:string, empresa:string, cargo:string, telefonos:string, acciones: string){
+    constructor(nombre:string, apellido:string, empresa:string, cargo:string, telefonos:number, acciones: string){
         this.nombre = nombre;
         this.apellido = apellido;
         this.empresa = empresa;
@@ -49,7 +49,7 @@ export class Dato {
     public setCargo(cargo:string){
         this.cargo = cargo;
     }
-    public setTelefonos(telefonos:string){
+    public setTelefonos(telefonos:number){
         this.telefonos = telefonos;
     }
 }
