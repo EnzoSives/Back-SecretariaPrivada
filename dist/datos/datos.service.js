@@ -39,7 +39,7 @@ let DatosService = class DatosService {
     }
     async addDato(datoDto) {
         try {
-            let dato = await this.datoRepository.save(new dato_entity_1.Dato(datoDto.nombre, datoDto.apellido, datoDto.empresa, datoDto.cargo, datoDto.telefonos, datoDto.acciones));
+            let dato = await this.datoRepository.save(new dato_entity_1.Dato(datoDto.nombre, datoDto.apellido, datoDto.empresa, datoDto.cargo, datoDto.telefonos, datoDto.acciones, datoDto.auditar));
             if (dato)
                 return dato;
             else
@@ -60,6 +60,7 @@ let DatosService = class DatosService {
                 dato.setCargo(datoDto.cargo);
                 dato.setTelefonos(datoDto.telefonos);
                 dato.setAcciones(datoDto.acciones);
+                dato.setAuditar(datoDto.auditar);
                 dato = await this.datoRepository.save(dato);
                 return dato;
             }

@@ -23,13 +23,17 @@ export class Dato {
     @Column()
     acciones: string
 
-    constructor(nombre:string, apellido:string, empresa:string, cargo:string, telefonos:number, acciones: string){
+    @Column()
+    auditar:boolean
+
+    constructor(nombre:string, apellido:string, empresa:string, cargo:string, telefonos:number, acciones: string, auditar:boolean){
         this.nombre = nombre;
         this.apellido = apellido;
         this.empresa = empresa;
         this.cargo = cargo;
         this.telefonos = telefonos;
         this.acciones = acciones;
+        this.auditar = auditar;
     }
     public getIdDato(): number{
         return this.id;
@@ -51,5 +55,8 @@ export class Dato {
     }
     public setTelefonos(telefonos:number){
         this.telefonos = telefonos;
+    }
+    public setAuditar(auditar:boolean){
+        this.auditar = auditar;
     }
 }

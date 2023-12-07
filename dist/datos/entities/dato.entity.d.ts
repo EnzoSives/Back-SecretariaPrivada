@@ -6,7 +6,8 @@ export declare class Dato {
     cargo: string;
     telefonos: number;
     acciones: string;
-    constructor(nombre: string, apellido: string, empresa: string, cargo: string, telefonos: number, acciones: string);
+    auditar: boolean;
+    constructor(nombre: string, apellido: string, empresa: string, cargo: string, telefonos: number, acciones: string, auditar: boolean);
     getIdDato(): number;
     setNombre(nombre: string): void;
     setApellido(apellido: string): void;
@@ -14,4 +15,5 @@ export declare class Dato {
     setEmpresa(empresa: string): void;
     setCargo(cargo: string): void;
     setTelefonos(telefonos: number): void;
+    setAuditar(auditar: boolean): void;
 }

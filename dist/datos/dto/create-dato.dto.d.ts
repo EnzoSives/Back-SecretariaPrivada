@@ -5,4 +5,5 @@ export declare class CreateDatoDto {
     cargo: string;
     telefonos: number;
     acciones: string;
+    auditar: boolean;
 }
