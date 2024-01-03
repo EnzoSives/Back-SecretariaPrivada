@@ -36,7 +36,7 @@ let UsersService = class UsersService {
     findByEmailWithPassword(email) {
         return this.userRepository.findOne({
             where: { email },
-            select: ['id', 'username', 'email', 'password', 'role'],
+            select: ['id', 'username', 'email', 'password'],
         });
     }
 };
