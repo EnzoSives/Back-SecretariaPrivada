@@ -47,33 +47,28 @@ export class DatosService {
     }
   }
 
-  public async updateDatoId(id:number, datoDto : CreateDatoDto) : Promise<Dato>{
-    try{
-      const criterio : FindOneOptions = { where : { id : id} };
-      let dato : Dato = await this.datoRepository.findOne(criterio);
-      if(dato){
-        dato.setNombre(datoDto.nombre);
-        dato.setApellido(datoDto.apellido);
-        dato.setEmpresa(datoDto.empresa);
-        dato.setCargo(datoDto.cargo);
-        dato.setTelefonos(datoDto.telefonos);
-        dato.setAcciones(datoDto.acciones);
-        dato.setAuditar(datoDto.auditar)
-        dato = await this.datoRepository.save(dato)
-        return dato;
-      }else
-      {
-        throw new Error(`No se pudo actualizar el id: ${id}`)
-      }
-    }
-    catch(error){
-      throw new HttpException(
-        {status: HttpStatus.NOT_FOUND,error:`500 - ERROR: ` +error},
-        HttpStatus.NOT_FOUND
-      )
-    }
+public async updateDatoId(id: number, datoDto: Partial<CreateDatoDto>): Promise<Dato> {
+  try {
+    const criterio: FindOneOptions = { where: { id: id } };
+    let dato: Dato = await this.datoRepository.findOne(criterio);
+    
+    if (dato) {
+      // Actualizar solo los campos proporcionados en datoDto
+      Object.assign(dato, datoDto);
 
+      dato = await this.datoRepository.save(dato);
+      return dato;
+    } else {
+      throw new Error(`No se pudo actualizar el id: ${id}`);
+    }
+  } catch (error) {
+    throw new HttpException(
+      { status: HttpStatus.NOT_FOUND, error: `500 - ERROR: ` + error },
+      HttpStatus.NOT_FOUND
+    );
+  }
 }
+
 
 public async deleteDato(id : number) : Promise<boolean> {
   try {

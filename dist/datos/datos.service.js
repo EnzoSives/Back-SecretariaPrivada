@@ -54,13 +54,7 @@ let DatosService = class DatosService {
             const criterio = { where: { id: id } };
             let dato = await this.datoRepository.findOne(criterio);
             if (dato) {
-                dato.setNombre(datoDto.nombre);
-                dato.setApellido(datoDto.apellido);
-                dato.setEmpresa(datoDto.empresa);
-                dato.setCargo(datoDto.cargo);
-                dato.setTelefonos(datoDto.telefonos);
-                dato.setAcciones(datoDto.acciones);
-                dato.setAuditar(datoDto.auditar);
+                Object.assign(dato, datoDto);
                 dato = await this.datoRepository.save(dato);
                 return dato;
             }

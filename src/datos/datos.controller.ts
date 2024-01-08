@@ -23,7 +23,7 @@ export class DatosController {
     return this.datosService.getId(id)
   }
 
-  @Put('actualizar/:id')
+  @Patch('actualizar/:id')
   updateDatoId(@Param('id')id:number, @Body() dato: CreateDatoDto) : Promise<Dato>{
     return this.datosService.updateDatoId(id,dato);
   }

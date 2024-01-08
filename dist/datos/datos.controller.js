@@ -58,7 +58,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], DatosController.prototype, "getId", null);
 __decorate([
-    (0, common_1.Put)('actualizar/:id'),
+    (0, common_1.Patch)('actualizar/:id'),
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
