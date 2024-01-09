@@ -9,7 +9,10 @@ export class Dato {
     nombre: string
     
     @Column()
-    apellido: string
+    apellido: string 
+
+    @Column()
+    dni:number
     
     @Column()
     empresa: string
@@ -26,9 +29,10 @@ export class Dato {
     @Column()
     auditar:boolean
 
-    constructor(nombre:string, apellido:string, empresa:string, cargo:string, telefonos:number, acciones: string, auditar:boolean){
+    constructor(nombre:string, apellido:string,dni:number, empresa:string, cargo:string, telefonos:number, acciones: string, auditar:boolean){
         this.nombre = nombre;
         this.apellido = apellido;
+        this.dni = dni;
         this.empresa = empresa;
         this.cargo = cargo;
         this.telefonos = telefonos;
@@ -43,6 +47,9 @@ export class Dato {
     }
     public setApellido(apellido:string){
         this.apellido = apellido;
+    }
+    public setDni(dni:number){
+        this.dni = dni;
     }
     public setAcciones(acciones:string){
         this.acciones = acciones;

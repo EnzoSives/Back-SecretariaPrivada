@@ -33,7 +33,7 @@ export class DatosService {
 
   public async addDato(datoDto: CreateDatoDto) : Promise<Dato>{
     try{
-      let dato: Dato = await this.datoRepository.save(new Dato(datoDto.nombre,datoDto.apellido,datoDto.empresa,datoDto.cargo,datoDto.telefonos,datoDto.acciones, datoDto.auditar))
+      let dato: Dato = await this.datoRepository.save(new Dato(datoDto.nombre,datoDto.apellido,datoDto.dni,datoDto.empresa,datoDto.cargo,datoDto.telefonos,datoDto.acciones, datoDto.auditar))
       if(dato)
       return dato;
     else

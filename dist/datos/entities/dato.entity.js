@@ -12,9 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-    constructor(nombre, apellido, empresa, cargo, telefonos, acciones, auditar) {
+    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.dni = dni;
         this.empresa = empresa;
         this.cargo = cargo;
         this.telefonos = telefonos;
@@ -29,6 +30,9 @@ let Dato = class Dato {
     }
     setApellido(apellido) {
         this.apellido = apellido;
+    }
+    setDni(dni) {
+        this.dni = dni;
     }
     setAcciones(acciones) {
         this.acciones = acciones;
@@ -61,6 +65,10 @@ __decorate([
 ], Dato.prototype, "apellido", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Dato.prototype, "dni", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Dato.prototype, "empresa", void 0);
 __decorate([
@@ -81,6 +89,6 @@ __decorate([
 ], Dato.prototype, "auditar", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
-    __metadata("design:paramtypes", [String, String, String, String, Number, String, Boolean])
+    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean])
 ], Dato);
 //# sourceMappingURL=dato.entity.js.map
