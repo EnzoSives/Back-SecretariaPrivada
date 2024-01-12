@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar) {
+    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion, observaciones) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -21,6 +21,23 @@ let Dato = class Dato {
         this.telefonos = telefonos;
         this.acciones = acciones;
         this.auditar = auditar;
+        this.nSolicitud = nSolicitud;
+        this.fecha = fecha;
+        this.temaAudiencia = temaAudiencia;
+        this.terreno = terreno;
+        this.anotado = anotado;
+        this.año = año;
+        this.tieneCasa = tieneCasa;
+        this.dondeAlquila = dondeAlquila;
+        this.tienetrabajo = tieneTrabajo;
+        this.dondeTrabaja = dondeTrabaja;
+        this.motivoConsulta = motivoConsulta;
+        this.recibioASocial = recibioASocial;
+        this.barrioASocial = barrioASocial;
+        this.cuandoASocial = cuandoASocial;
+        this.recibeASocial = recibeASocial;
+        this.contraprestacion = contraprestacion;
+        this.observaciones = observaciones;
     }
     getIdDato() {
         return this.id;
@@ -87,8 +104,76 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "auditar", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Dato.prototype, "nSolicitud", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Date)
+], Dato.prototype, "fecha", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "temaAudiencia", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "terreno", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "anotado", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Dato.prototype, "a\u00F1o", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "tieneCasa", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: "No Alquila" }),
+    __metadata("design:type", String)
+], Dato.prototype, "dondeAlquila", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "tienetrabajo", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "dondeTrabaja", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "motivoConsulta", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "recibioASocial", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "barrioASocial", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Date)
+], Dato.prototype, "cuandoASocial", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Dato.prototype, "recibeASocial", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "contraprestacion", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Dato.prototype, "observaciones", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
-    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean])
+    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean, Number, Date, String, Boolean, Boolean, Number, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String, String])
 ], Dato);
 //# sourceMappingURL=dato.entity.js.map
