@@ -12,10 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-
     constructor(nombre, apellido, dni, direccion, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion) {
-
-
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
