@@ -78,7 +78,6 @@ export class Dato {
     contraprestacion: string
 
 
-
     constructor(nombre: string, apellido: string, dni: number, direccion: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
         fecha: Date,
         temaAudiencia: string,
@@ -120,6 +119,7 @@ export class Dato {
         this.cuandoASocial = cuandoASocial;
         this.recibeASocial = recibeASocial;
         this.contraprestacion = contraprestacion;
+
     }
     public getIdDato(): number {
         return this.id;
