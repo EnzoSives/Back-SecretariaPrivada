@@ -10,8 +10,8 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'bjeea2lcgcdmneaujsib-mysql.services.clever-cloud.com',
-      // host: 'bct3k8v4ehk7fh77hma9-mysql.services.clever-cloud.com',
+      host: 'bjeea2lcgcdmneaujsib-mysql.services.clever-cloud.com',  // SECRETARIA DB
+      // host: 'bct3k8v4ehk7fh77hma9-mysql.services.clever-cloud.com', // PRUEBA DB
       port: 3306,
       username: 'uxejyhsch46jhsem',
       // username: 'ualk8hbjhiacgall',
