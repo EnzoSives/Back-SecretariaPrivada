@@ -77,8 +77,7 @@ export class Dato {
     @Column()
     contraprestacion: string
 
-    @Column()
-    observaciones: string
+    
 
     constructor(nombre: string, apellido: string, dni: number, empresa: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
         fecha: Date,
@@ -96,7 +95,7 @@ export class Dato {
         cuandoASocial: Date,
         recibeASocial: boolean,
         contraprestacion: string,
-        observaciones: string,) {
+        ) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -121,7 +120,7 @@ export class Dato {
         this.cuandoASocial = cuandoASocial;
         this.recibeASocial = recibeASocial;
         this.contraprestacion = contraprestacion;
-        this.observaciones = observaciones;
+        
     }
     public getIdDato(): number {
         return this.id;

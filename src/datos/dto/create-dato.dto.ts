@@ -24,5 +24,4 @@ export class CreateDatoDto {
     cuandoASocial:Date;
     recibeASocial:boolean;
     contraprestacion:string;
-    observaciones:string;
 }

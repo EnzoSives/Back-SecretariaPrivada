@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion, observaciones) {
+    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -37,7 +37,6 @@ let Dato = class Dato {
         this.cuandoASocial = cuandoASocial;
         this.recibeASocial = recibeASocial;
         this.contraprestacion = contraprestacion;
-        this.observaciones = observaciones;
     }
     getIdDato() {
         return this.id;
@@ -168,12 +167,8 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Dato.prototype, "contraprestacion", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], Dato.prototype, "observaciones", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
-    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean, Number, Date, String, Boolean, Boolean, Number, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String, String])
+    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean, Number, Date, String, Boolean, Boolean, Number, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String])
 ], Dato);
 //# sourceMappingURL=dato.entity.js.map
