@@ -12,11 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-    constructor(nombre, apellido, dni, empresa, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion) {
+
+    constructor(nombre, apellido, dni, direccion, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion) {
+
+
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.empresa = empresa;
+        this.direccion = direccion;
         this.cargo = cargo;
         this.telefonos = telefonos;
         this.acciones = acciones;
@@ -53,8 +56,8 @@ let Dato = class Dato {
     setAcciones(acciones) {
         this.acciones = acciones;
     }
-    setEmpresa(empresa) {
-        this.empresa = empresa;
+    setdireccion(direccion) {
+        this.direccion = direccion;
     }
     setCargo(cargo) {
         this.cargo = cargo;
@@ -72,23 +75,23 @@ __decorate([
     __metadata("design:type", Number)
 ], Dato.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "nombre", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "apellido", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)
 ], Dato.prototype, "dni", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
-], Dato.prototype, "empresa", void 0);
+], Dato.prototype, "direccion", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "cargo", void 0);
 __decorate([
@@ -96,7 +99,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Dato.prototype, "telefonos", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "acciones", void 0);
 __decorate([
@@ -104,7 +107,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "auditar", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)
 ], Dato.prototype, "nSolicitud", void 0);
 __decorate([
@@ -112,7 +115,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Dato.prototype, "fecha", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "temaAudiencia", void 0);
 __decorate([
@@ -124,7 +127,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "anotado", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: 0 }),
     __metadata("design:type", Number)
 ], Dato.prototype, "a\u00F1o", void 0);
 __decorate([
@@ -140,11 +143,11 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "tienetrabajo", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "dondeTrabaja", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "motivoConsulta", void 0);
 __decorate([
@@ -152,7 +155,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "recibioASocial", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "barrioASocial", void 0);
 __decorate([
@@ -164,7 +167,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "recibeASocial", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "contraprestacion", void 0);
 exports.Dato = Dato = __decorate([

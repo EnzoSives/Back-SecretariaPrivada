@@ -2,7 +2,7 @@ export declare class CreateDatoDto {
     nombre: string;
     apellido: string;
     dni: number;
-    empresa: string;
+    direccion: string;
     cargo: string;
     telefonos: number;
     acciones: string;

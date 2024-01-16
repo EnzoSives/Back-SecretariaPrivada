@@ -5,37 +5,37 @@ export class Dato {
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column()
+    @Column({ default: "Sin completar" })
     nombre: string
 
-    @Column()
+    @Column({ default: "Sin completar" })
     apellido: string
 
-    @Column()
+    @Column({ default: 0 })
     dni: number
 
-    @Column()
-    empresa: string
+    @Column({ default: "Sin completar" })
+    direccion: string
 
-    @Column()
+    @Column({ default: "Sin completar" })
     cargo: string
 
     @Column({ default: 0 })
     telefonos: number
 
-    @Column()
+    @Column({ default: "Sin completar" })
     acciones: string
 
     @Column()
     auditar: boolean
 
-    @Column()
+    @Column({ default: 0 })
     nSolicitud: number
 
     @Column()
     fecha: Date;
 
-    @Column()
+    @Column({ default: "Sin completar" })
     temaAudiencia: string
 
     @Column()
@@ -44,7 +44,7 @@ export class Dato {
     @Column()
     anotado: boolean
 
-    @Column()
+    @Column({ default: 0 })
     año: number
 
     @Column()
@@ -56,16 +56,16 @@ export class Dato {
     @Column()
     tienetrabajo: boolean
 
-    @Column()
+    @Column({ default: "Sin completar" })
     dondeTrabaja: string
 
-    @Column()
+    @Column({ default: "Sin completar" })
     motivoConsulta: string
 
     @Column()
     recibioASocial: boolean
 
-    @Column()
+    @Column({ default: "Sin completar" })
     barrioASocial: string
 
     @Column()
@@ -74,12 +74,11 @@ export class Dato {
     @Column()
     recibeASocial: boolean
 
-    @Column()
+    @Column({ default: "Sin completar" })
     contraprestacion: string
 
-    
 
-    constructor(nombre: string, apellido: string, dni: number, empresa: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
+    constructor(nombre: string, apellido: string, dni: number, direccion: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
         fecha: Date,
         temaAudiencia: string,
         terreno: boolean,
@@ -99,7 +98,7 @@ export class Dato {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.empresa = empresa;
+        this.direccion = direccion;
         this.cargo = cargo;
         this.telefonos = telefonos;
         this.acciones = acciones;
@@ -120,7 +119,7 @@ export class Dato {
         this.cuandoASocial = cuandoASocial;
         this.recibeASocial = recibeASocial;
         this.contraprestacion = contraprestacion;
-        
+
     }
     public getIdDato(): number {
         return this.id;
@@ -137,8 +136,8 @@ export class Dato {
     public setAcciones(acciones: string) {
         this.acciones = acciones;
     }
-    public setEmpresa(empresa: string) {
-        this.empresa = empresa;
+    public setdireccion(direccion: string) {
+        this.direccion = direccion;
     }
     public setCargo(cargo: string) {
         this.cargo = cargo;
