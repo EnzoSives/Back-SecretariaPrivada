@@ -23,4 +23,5 @@ export declare class CreateDatoDto {
     cuandoASocial: Date;
     recibeASocial: boolean;
     contraprestacion: string;
+    createdAt: Date;
 }
