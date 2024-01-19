@@ -12,10 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dato = void 0;
 const typeorm_1 = require("typeorm");
 let Dato = class Dato {
-
     constructor(nombre, apellido, dni, direccion, cargo, telefonos, acciones, auditar, nSolicitud, fecha, temaAudiencia, terreno, anotado, año, tieneCasa, dondeAlquila, tieneTrabajo, dondeTrabaja, motivoConsulta, recibioASocial, barrioASocial, cuandoASocial, recibeASocial, contraprestacion) {
-
-
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -103,7 +100,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "acciones", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "auditar", void 0);
 __decorate([
@@ -119,11 +116,11 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "temaAudiencia", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "terreno", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "anotado", void 0);
 __decorate([
@@ -131,7 +128,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Dato.prototype, "a\u00F1o", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "tieneCasa", void 0);
 __decorate([
@@ -139,7 +136,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "dondeAlquila", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "tienetrabajo", void 0);
 __decorate([
@@ -151,7 +148,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "motivoConsulta", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "recibioASocial", void 0);
 __decorate([
@@ -163,7 +160,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Dato.prototype, "cuandoASocial", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], Dato.prototype, "recibeASocial", void 0);
 __decorate([

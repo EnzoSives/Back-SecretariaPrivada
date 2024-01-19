@@ -6,76 +6,78 @@ export class Dato {
     id: number
 
     @Column({ default: "Sin completar" })
-    nombre: string
+    nombre?: string
 
     @Column({ default: "Sin completar" })
-    apellido: string
+    apellido?: string
 
     @Column({ default: 0 })
-    dni: number
+    dni?: number
 
     @Column({ default: "Sin completar" })
-    direccion: string
+    direccion?: string
 
     @Column({ default: "Sin completar" })
-    cargo: string
+    cargo?: string
 
     @Column({ default: 0 })
-    telefonos: number
+    telefonos?: number
 
     @Column({ default: "Sin completar" })
-    acciones: string
+    acciones?: string
 
-    @Column()
-    auditar: boolean
+    @Column({ default: false })
+    auditar?: boolean
 
     @Column({ default: 0 })
-    nSolicitud: number
+    nSolicitud?: number
 
     @Column()
-    fecha: Date;
+    fecha?: Date;
 
     @Column({ default: "Sin completar" })
-    temaAudiencia: string
+    temaAudiencia?: string
 
-    @Column()
-    terreno: boolean
+    @Column({ default: false })
+    terreno?: boolean
 
-    @Column()
-    anotado: boolean
+    @Column({ default: false })
+    anotado?: boolean
 
     @Column({ default: 0 })
-    año: number
+    año?: number
 
-    @Column()
-    tieneCasa: boolean
+    @Column({ default: false })
+    tieneCasa?: boolean
 
     @Column({ default: "No Alquila" })
-    dondeAlquila: string
+    dondeAlquila?: string
 
-    @Column()
-    tienetrabajo: boolean
-
-    @Column({ default: "Sin completar" })
-    dondeTrabaja: string
+    @Column({ default: false })
+    tienetrabajo?: boolean
 
     @Column({ default: "Sin completar" })
-    motivoConsulta: string
-
-    @Column()
-    recibioASocial: boolean
+    dondeTrabaja?: string
 
     @Column({ default: "Sin completar" })
-    barrioASocial: string
+    motivoConsulta?: string
 
-    @Column()
-    cuandoASocial: Date
-
-    @Column()
-    recibeASocial: boolean
+    @Column({ default: false })
+    recibioASocial?: boolean
 
     @Column({ default: "Sin completar" })
-    contraprestacion: string
+    barrioASocial?: string
+
+    @Column()
+    cuandoASocial?: Date
+
+    @Column({ default: false })
+    recibeASocial?: boolean
+
+    @Column({ default: "Sin completar" })
+    contraprestacion?: string
+
+
 
 
     constructor(nombre: string, apellido: string, dni: number, direccion: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,

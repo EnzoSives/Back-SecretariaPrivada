@@ -40,8 +40,6 @@ let DatosService = class DatosService {
     async addDato(datoDto) {
         try {
             let dato = await this.datoRepository.save(new dato_entity_1.Dato(datoDto.nombre, datoDto.apellido, datoDto.dni, datoDto.direccion, datoDto.cargo, datoDto.telefonos, datoDto.acciones, datoDto.auditar, datoDto.nSolicitud, datoDto.fecha, datoDto.temaAudiencia, datoDto.terreno, datoDto.anotado, datoDto.año, datoDto.tieneCasa, datoDto.dondeAlquila, datoDto.tieneTrabajo, datoDto.dondeTrabaja, datoDto.motivoConsulta, datoDto.recibioASocial, datoDto.barrioASocial, datoDto.cuandoASocial, datoDto.recibeASocial, datoDto.contraprestacion));
-
-
             if (dato)
                 return dato;
             else
