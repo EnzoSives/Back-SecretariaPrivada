@@ -167,6 +167,10 @@ __decorate([
     (0, typeorm_1.Column)({ default: "Sin completar" }),
     __metadata("design:type", String)
 ], Dato.prototype, "contraprestacion", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" }),
+    __metadata("design:type", Date)
+], Dato.prototype, "createdAt", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
     __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean, Number, Date, String, Boolean, Boolean, Number, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String])

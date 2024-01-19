@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm"
 
 @Entity()
 export class Dato {
@@ -79,6 +79,8 @@ export class Dato {
 
 
 
+    @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
+    createdAt: Date;
 
     constructor(nombre: string, apellido: string, dni: number, direccion: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
         fecha: Date,
@@ -96,7 +98,7 @@ export class Dato {
         cuandoASocial: Date,
         recibeASocial: boolean,
         contraprestacion: string,
-        ) {
+    ) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
