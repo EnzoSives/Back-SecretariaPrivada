@@ -11,7 +11,7 @@ export class Dato {
     @Column({ default: "Sin completar" })
     apellido?: string
 
-    @Column({ default: 0 })
+    @Column()
     dni?: number
 
     @Column({ default: "Sin completar" })
@@ -20,7 +20,7 @@ export class Dato {
     @Column({ default: "Sin completar" })
     cargo?: string
 
-    @Column({ default: 0 })
+    @Column()
     telefonos?: number
 
     @Column({ type: "longtext", nullable: true })
@@ -29,7 +29,7 @@ export class Dato {
     @Column({ default: false })
     auditar?: boolean
 
-    @Column({ default: 0 })
+    @Column()
     nSolicitud?: number
 
     @Column()
@@ -44,7 +44,7 @@ export class Dato {
     @Column({ default: false })
     anotado?: boolean
 
-    @Column({ default: 0 })
+    @Column()
     año?: number
 
     @Column({ default: false })

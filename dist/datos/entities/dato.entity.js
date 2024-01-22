@@ -80,7 +80,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "apellido", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 0 }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Dato.prototype, "dni", void 0);
 __decorate([
@@ -92,7 +92,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "cargo", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 0 }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Dato.prototype, "telefonos", void 0);
 __decorate([
@@ -104,7 +104,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "auditar", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 0 }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Dato.prototype, "nSolicitud", void 0);
 __decorate([
@@ -124,7 +124,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "anotado", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 0 }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Dato.prototype, "a\u00F1o", void 0);
 __decorate([
