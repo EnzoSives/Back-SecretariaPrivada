@@ -96,7 +96,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Dato.prototype, "telefonos", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "Sin completar" }),
+    (0, typeorm_1.Column)({ type: "longtext", nullable: true }),
     __metadata("design:type", String)
 ], Dato.prototype, "acciones", void 0);
 __decorate([
@@ -112,7 +112,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Dato.prototype, "fecha", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "Sin completar" }),
+    (0, typeorm_1.Column)({ type: "longtext", nullable: true }),
     __metadata("design:type", String)
 ], Dato.prototype, "temaAudiencia", void 0);
 __decorate([
@@ -144,7 +144,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dato.prototype, "dondeTrabaja", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "Sin completar" }),
+    (0, typeorm_1.Column)({ type: "longtext", nullable: true }),
     __metadata("design:type", String)
 ], Dato.prototype, "motivoConsulta", void 0);
 __decorate([
@@ -164,7 +164,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Dato.prototype, "recibeASocial", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "Sin completar" }),
+    (0, typeorm_1.Column)({ type: "longtext", nullable: true }),
     __metadata("design:type", String)
 ], Dato.prototype, "contraprestacion", void 0);
 __decorate([

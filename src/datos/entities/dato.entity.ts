@@ -23,7 +23,7 @@ export class Dato {
     @Column({ default: 0 })
     telefonos?: number
 
-    @Column({ default: "Sin completar" })
+    @Column({ type: "longtext", nullable: true })
     acciones?: string
 
     @Column({ default: false })
@@ -35,7 +35,7 @@ export class Dato {
     @Column()
     fecha?: Date;
 
-    @Column({ default: "Sin completar" })
+    @Column({ type: "longtext", nullable: true })
     temaAudiencia?: string
 
     @Column({ default: false })
@@ -59,7 +59,7 @@ export class Dato {
     @Column({ default: "Sin completar" })
     dondeTrabaja?: string
 
-    @Column({ default: "Sin completar" })
+    @Column({ type: "longtext", nullable: true })
     motivoConsulta?: string
 
     @Column({ default: false })
@@ -74,7 +74,7 @@ export class Dato {
     @Column({ default: false })
     recibeASocial?: boolean
 
-    @Column({ default: "Sin completar" })
+    @Column({ type: "longtext", nullable: true })
     contraprestacion?: string
 
 
