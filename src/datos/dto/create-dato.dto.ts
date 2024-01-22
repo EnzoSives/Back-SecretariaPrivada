@@ -1,19 +1,19 @@
 export class CreateDatoDto {
     nombre?:string;
     apellido?:string;
-    dni?:number;
+    dni?:string;
     direccion?:string;
     cargo?:string;
-    telefonos?:number;
+    telefonos?:string;
     acciones?:string;
     auditar?:boolean;
     //Ficha audiencia
-    nSolicitud?:number;
+    nSolicitud?:string;
     fecha?:Date;
     temaAudiencia?:string;
     terreno?:boolean;
     anotado?:boolean;
-    año?:number;
+    año?:string;
     tieneCasa?:boolean;
     dondeAlquila?:string;
     tieneTrabajo?:boolean;
