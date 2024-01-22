@@ -12,7 +12,7 @@ export class Dato {
     apellido?: string
 
     @Column()
-    dni?: number
+    dni?: string
 
     @Column({ default: "Sin completar" })
     direccion?: string
@@ -21,7 +21,7 @@ export class Dato {
     cargo?: string
 
     @Column()
-    telefonos?: number
+    telefonos?: string
 
     @Column({ type: "longtext", nullable: true })
     acciones?: string
@@ -30,7 +30,7 @@ export class Dato {
     auditar?: boolean
 
     @Column()
-    nSolicitud?: number
+    nSolicitud?: string
 
     @Column()
     fecha?: Date;
@@ -45,7 +45,7 @@ export class Dato {
     anotado?: boolean
 
     @Column()
-    año?: number
+    año?: string
 
     @Column({ default: false })
     tieneCasa?: boolean
@@ -82,12 +82,12 @@ export class Dato {
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
     createdAt: Date;
 
-    constructor(nombre: string, apellido: string, dni: number, direccion: string, cargo: string, telefonos: number, acciones: string, auditar: boolean, nSolicitud: number,
+    constructor(nombre: string, apellido: string, dni: string, direccion: string, cargo: string, telefonos: string, acciones: string, auditar: boolean, nSolicitud: string,
         fecha: Date,
         temaAudiencia: string,
         terreno: boolean,
         anotado: boolean,
-        año: number,
+        año: string,
         tieneCasa: boolean,
         dondeAlquila: string,
         tieneTrabajo: boolean,
@@ -134,7 +134,7 @@ export class Dato {
     public setApellido(apellido: string) {
         this.apellido = apellido;
     }
-    public setDni(dni: number) {
+    public setDni(dni: string) {
         this.dni = dni;
     }
     public setAcciones(acciones: string) {
@@ -146,7 +146,7 @@ export class Dato {
     public setCargo(cargo: string) {
         this.cargo = cargo;
     }
-    public setTelefonos(telefonos: number) {
+    public setTelefonos(telefonos: string) {
         this.telefonos = telefonos;
     }
     public setAuditar(auditar: boolean) {

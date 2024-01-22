@@ -81,7 +81,7 @@ __decorate([
 ], Dato.prototype, "apellido", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Dato.prototype, "dni", void 0);
 __decorate([
     (0, typeorm_1.Column)({ default: "Sin completar" }),
@@ -93,7 +93,7 @@ __decorate([
 ], Dato.prototype, "cargo", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Dato.prototype, "telefonos", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "longtext", nullable: true }),
@@ -105,7 +105,7 @@ __decorate([
 ], Dato.prototype, "auditar", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Dato.prototype, "nSolicitud", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
@@ -125,7 +125,7 @@ __decorate([
 ], Dato.prototype, "anotado", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Dato.prototype, "a\u00F1o", void 0);
 __decorate([
     (0, typeorm_1.Column)({ default: false }),
@@ -173,6 +173,6 @@ __decorate([
 ], Dato.prototype, "createdAt", void 0);
 exports.Dato = Dato = __decorate([
     (0, typeorm_1.Entity)(),
-    __metadata("design:paramtypes", [String, String, Number, String, String, Number, String, Boolean, Number, Date, String, Boolean, Boolean, Number, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String])
+    __metadata("design:paramtypes", [String, String, String, String, String, String, String, Boolean, String, Date, String, Boolean, Boolean, String, Boolean, String, Boolean, String, String, Boolean, String, Date, Boolean, String])
 ], Dato);
 //# sourceMappingURL=dato.entity.js.map
