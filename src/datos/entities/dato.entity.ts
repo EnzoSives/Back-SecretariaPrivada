@@ -77,6 +77,9 @@ export class Dato {
     @Column({ type: "longtext", nullable: true })
     contraprestacion?: string
 
+    @Column({ default: false })
+    pedidos?: boolean
+
 
 
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
@@ -98,6 +101,7 @@ export class Dato {
         cuandoASocial: Date,
         recibeASocial: boolean,
         contraprestacion: string,
+        pedidos: boolean,
     ) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -123,6 +127,7 @@ export class Dato {
         this.cuandoASocial = cuandoASocial;
         this.recibeASocial = recibeASocial;
         this.contraprestacion = contraprestacion;
+        this.pedidos = pedidos;
 
     }
     public getIdDato(): number {
